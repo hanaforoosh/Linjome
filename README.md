@@ -1,2 +1,2 @@
 # Linjome
-An English to Persian translator for ubuntu.
+Any language to Persian translator for ubuntu.
