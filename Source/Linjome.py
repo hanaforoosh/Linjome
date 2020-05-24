@@ -2,7 +2,7 @@
 import subprocess
 
 def install(name):
-    subprocess.call(['pip', 'install', name])
+    subprocess.call(['pip3', 'install', name])
 
 try:
     import pyautogui as pya
