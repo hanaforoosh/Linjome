@@ -19,4 +19,4 @@ Successfully Done!
 ```
 3. حالا کافیه هرجا که نیاز به ترجمه بود ترکیب کلید انتخاب شده برای میانبر ترجمه، فشرده بشه
 
-![Screenshot](screenshot.png)
+![Screenshot](Screenshot.png)
