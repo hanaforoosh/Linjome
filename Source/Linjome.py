@@ -7,6 +7,10 @@ def install(name):
 try:
     import pyautogui as pya
 except:
+    install('python3-xlib')
+    install('scrot')
+    install('python3-tk')
+    install('python3-dev')
     install('pyautogui')
     import pyautogui as pya
 
