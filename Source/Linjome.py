@@ -1,5 +1,7 @@
+#!/usr/bin/env python3
 #----- Imports Section -----
 import subprocess
+import sys
 
 def install(name):
     subprocess.call(['pip3', 'install', name])
@@ -80,10 +82,44 @@ def notify(message):
     ).send()
 
 #----- Main Section -----
-inp=clipboard()
-text=translate(inp)
-notify(text)
+if len(sys.argv)>1:
+    if sys.argv[1]=='install':
+        try:
+            import pyautogui as pya
+        except:
+            install('python3-xlib')
+            install('scrot')
+            install('python3-tk')
+            install('python3-dev')
+            install('pyautogui')
+            import pyautogui as pya
 
+        try:
+            import pyperclip
+        except:
+            install('pyperclip')
+            import pyperclip
 
+        try:
+            from googletrans import Translator
+        except:
+            install('googletrans')
+            from googletrans import Translator
 
-
+        try:
+            from pynotifier import Notification
+        except:
+            install('py-notifier')
+            from pynotifier import Notification
+            
+        print('Successfully Done!')
+    else:
+            print('usage: python3 Linjome.py install')
+    
+else:
+    try:
+        inp=clipboard()
+        text=translate(inp)
+        notify(text)
+    except:
+        print('\nusage: python3 Linjome.py install')
